@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        transition: width 2s, height 4s;
+      }
+      div:hover {
+        width: 300px;
+        height: 300px;
+      }
+      .circleS:hover circle {
+        stroke-width: 10;
+      }
+
+      .circleS:hover text {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The transition Property</h1>
+
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <div>
+      <svg height="100" width="100" class="circleS">
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="black"
+          stroke-width="3"
+          fill="red"
+        />
+        <text x="25" y="50" fill="white">Random</text>
+      </svg>
+    </div>
+  </body>
+</html>
