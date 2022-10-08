@@ -1,0 +1,140 @@
+<htlml>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="bg">
+       <div class="animate"> <h1 class="header"> Book your Car</h1></div><br>
+    <form class="container" name="myForm" onsubmit="return validateForm()" method="post">
+        <table>
+          <tr>
+            <td><label>Salutation</label></td>
+            <td><select id="salutation" name="salutation">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                
+              </select></td>
+        </tr>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" id="name1" name="name1"  onfocus="focusFunction1()" onblur="blurFunction1()"></td>
+            </tr>
+            <tr>
+                <td><label>Car Name</label></td>
+                <td><select id="cars" name="cars">
+                    <option value="None">None</option>
+                    <option value="Maruti Wagaonr">Maruti Ertiga</option>
+                    <option value="Tata Tiago">Tata Tiago</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Mahindra Scorpio">Mahindra Scorpio</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td><label>Car type</label></td>
+                <td><label for="petrol">Petrol</label>
+                    <input type="radio" id="petrol" name="petrol" >
+                    <label for="Diesel">Diesel</label>
+                    <input type="radio" id="Diesel" name="diesel" >
+                    <label for="CNG">CNG</label>
+                    <input type="radio" id="CNG" name="CNG" >
+                </td>
+            </tr>  
+            <tr>
+                <td>
+                    <label>Pick Location</label></td>
+                    <td><input type="text" id="name2" name="name2" onfocus="focusFunction2()" onblur="blurFunction2()" ></td>
+                </tr>
+                <tr>
+                    <td><label>Drop Location</label></td>
+                    <td><input type="text" id="name3" name="name3" onfocus="focusFunction3()" onblur="blurFunction3()"></td>                        
+                </tr>   
+                <tr>
+                    <td><label for="Date">Date</label></td>
+                    <td><input type="date" id="Date" name="Date"></td>
+                </tr>
+                <tr>
+                    <td><label for="Time">Time</label></td>
+                    <td><input type="time" id="Time" name="Time"></td>
+                </tr> 
+                <tr>
+                    <td><label for="Phone ">Phone</label></td>
+                    <td><input type="text" id="phone" name="Phone" onfocus="focusFunction()" onblur="blurFunction()"></td>
+                </tr>      
+        </table>
+        <div class="center"><button  class='btn' type="submit" name="submit">Submit</button></div>
+    </form>
+      
+     <script>
+        function validateForm() {
+  let x = document.forms["myForm"]["name1"].value;
+  let y = document.forms["myForm"]["name2"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (y == "") {
+    alert("Pick location must be filled out");
+    return false;
+  }
+  let z = document.forms["myForm"]["name3"].value;
+  if (z== "") {
+    alert("Drop location must be filled out");
+    return false;
+  }
+  let a = document.forms["myForm"]["Date"].value;
+  if (a == "") {
+    alert("Date must be filled out");
+    return false;
+  }
+  let b= document.forms["myForm"]["Time"].value;
+  if (b == "") {
+    alert("Time must be filled out");
+    return false;
+  }
+  let c= document.forms["myForm"]["Phone"].value;
+  if (c == "") {
+    alert("Phone number must be filled out");
+    return false;
+  }
+}
+
+function focusFunction() {
+  // Focus = Changes the background color of input to yellow
+  document.getElementById("phone").style.background = "#E6E6FA";
+}
+
+function blurFunction() {
+  // No focus = Changes the background color of input to red
+  document.getElementById("phone").style.background = "";
+}
+function focusFunction1() {
+  // Focus = Changes the background color of input to yellow
+  document.getElementById("name1").style.background = "#E6E6FA";
+}
+
+function blurFunction1() {
+  // No focus = Changes the background color of input to red
+  document.getElementById("name1").style.background = "";
+}
+function focusFunction2() {
+  // Focus = Changes the background color of input to yellow
+  document.getElementById("name2").style.background = "#E6E6FA";
+}
+
+function blurFunction2() {
+  // No focus = Changes the background color of input to red
+  document.getElementById("name2").style.background = "";
+}
+function focusFunction3() {
+  // Focus = Changes the background color of input to yellow
+  document.getElementById("name3").style.background = "#E6E6FA";
+}
+
+function blurFunction3() {
+  // No focus = Changes the background color of input to red
+  document.getElementById("name3").style.background = "";
+}
+       
+ 
+        </script>
+    </body>
+</html>
